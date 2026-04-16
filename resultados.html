@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Formulários</title>
+        <style>
+        body{
+            background-color: yellow;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aprenda HTML - Todas as páginas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="forms.html">Formulário</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Resultados do Formulário</h2>
+        <div id="resultados"></div>
+        <a href="forms.html">Voltar ao Formulário</a>
+    </main>
+    <footer>
+        (Copyright) Aulas HTML TOP
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const resultadosDiv = document.getElementById('resultados');
+        
+        const nome = params.get('nome') || 'Não preenchido';
+        const idade = params.get('idade') || 'Não preenchido';
+        const email = params.get('email') || 'Não preenchido';
+        const linguagem = params.get('linguagem') || 'Nenhuma selecionada';
+        const checkboxes = params.getAll('cbhtml').concat(params.getAll('cbcss'));
+        const checkboxesTexto = checkboxes.length > 0 ? checkboxes.join(', ') : 'Nenhuma selecionada';
+        
+        resultadosDiv.innerHTML = `
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Idade:</strong> ${idade}</p>
+            <p><strong>E-mail:</strong> ${email}</p>
+            <p><strong>Linguagem (Radio):</strong> ${linguagem}</p>
+            <p><strong>Linguagens (Checkbox):</strong> ${checkboxesTexto}</p>
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário HTML</title>
+        <style>
+        body{
+            background-color: yellow;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+             background-color: green;
+        }
+        input{
+            background-color: red;
+        }
+        label{
+            background-color: blue;
+        }
+        h3{ 
+            background-color: pink;
+        }
+        #nomeFooter{
+            background-color: purple;
+        }
+        .lbesquerda{
+            background-color: orange;
+        }
+        .lbdireita{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <header>
+<h1>Aprenda HTML - Todas as páginas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="forms.html">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <form action="resultados.html" method="get">
+            <label for="nome" class="lbesquerda">Nome:</label>
+            <input type="text" name="nome" id="nome"><br>
+            <label for="idade" class="lbesquerda">Idade:</label>
+            <input type="number" name="idade" id="idade"><br>
+            <label for="email" class="lbesquerda">E-mail:</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="endereco" class="lbesquerda">Endereço:</label>
+            <input type="text" name="endereco" id="endereco"><br>
+<!-- GERAL: Criar mais uma página e adicionar no "nav" -->
+ <!-- GERAL 2: Preencher com conteúdo nos headers e footers de todas as páginas -->
+            <h2>Selecione a linguagem - RADIO</h2>
+            <input type="radio" name="linguagem" id="rdhtml" value="html">
+            <label for="rdhtml" class="lbdireita">HTML</label><br>
+            <input type="radio" name="linguagem" id="rdcss" value="css">
+            <label for="rdcss" class="lbdireita">CSS</label>
+<!-- Criar mais radios -->
+            <h2>Selecione quantas linguagens quiser - CHECKBOX</h2>
+            <input type="checkbox" name="cbhtml" id="cbhtml" value="html">
+            <label for="cbhtml" class="lbdireita">HTML</label> <br>
+            <input type="checkbox" name="cbcss" id="cbcss" value="css">
+            <label for="cbcss" class="lbdireita">CSS</label>
+<!-- criar mais checkbox -->
+            <br>
+            <input type="submit" value="Vai Pokemon">
+            <a href="#nome">Voltar para Nome</a>
+        </form>
+
+    </main>
+    <footer>
+        <h3>(Copyright) Aulas HTML TOP</h3>
+        <h3 id="nomeFooter">Angelo Dias</h3>
+    </footer>
+</body>
+</html>
